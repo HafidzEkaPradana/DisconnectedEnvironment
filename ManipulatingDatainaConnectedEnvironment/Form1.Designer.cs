@@ -367,6 +367,7 @@ namespace ManipulatingDatainaConnectedEnvironment
             this.cmdAdd.TabIndex = 2;
             this.cmdAdd.Text = "Add";
             this.cmdAdd.UseVisualStyleBackColor = true;
+            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click);
             // 
             // cmdDelete
             // 
@@ -376,6 +377,7 @@ namespace ManipulatingDatainaConnectedEnvironment
             this.cmdDelete.TabIndex = 3;
             this.cmdDelete.Text = "Delete";
             this.cmdDelete.UseVisualStyleBackColor = true;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
             // 
             // cmdSave
             // 
