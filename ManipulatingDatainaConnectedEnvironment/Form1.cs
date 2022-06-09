@@ -36,6 +36,20 @@ namespace ManipulatingDatainaConnectedEnvironment
             dr[4] = txCountry.Text;
             dr[5] = cbDesignation.SelectedItem;
             dr[6] = cbDepartment.SelectedItem;
+            dt.Rows.Add(dr);
+            empdetailsTableAdapter.Update(hRDataSet);
+            txCode.Text = System.Convert.ToString(dr[0]);
+            txCode.Enabled = false;
+            txName.Enabled = false;
+            txAddress.Enabled = false;
+            txState.Enabled = false;
+            txCountry.Enabled = false;
+            cbDesignation.Enabled = false;
+            cbDepartment.Enabled = false;
+            this.empdetailsTableAdapter.Fill(this.hRDataSet.empdetails);
+            cmdAdd.Enabled = true;
+            cmdSave.Enabled = true;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
